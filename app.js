@@ -1,8 +1,13 @@
+gsap.registerPlugin(ScrollTrigger);
 
-
-new fullpage('#fullpage', {
-    autoScrolling: true,
-    sectionsColor: ['#575c66', '#4BBFC3', '#7BAABE', 'whitesmoke', '#3aBFC3'],
-    navigation: true,
-    lazyLoading: true,
+gsap.utils.toArray('.section').forEach(section => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: 'top top',
+    end: "+=400",
+    pin: true,
+    scrub:true
+  });
 });
+
+

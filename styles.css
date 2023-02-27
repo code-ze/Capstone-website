@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0;
+}
+
+.NoScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.NoScrollBar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#scroller {
+  scroll-snap-type: y mandatory;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+#scroll-content-wrapper {
+
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #ccc;
+}
+
+#scroll-content {
+  width: 100%;
+}
+
+
+
+/* nav bar css */
+.sidenav {
+  margin-right: .5%;
+  display: inline-block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+
+  /* add space on the right side */
+  /* center vertically */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.sidenav a {
+
+  text-decoration: none;
+  font-size: 30px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+  /* add margin between items */
+}
+
+@media (max-width: 767px) {
+  .sidenav {
+    display: none;
+  }
+}
