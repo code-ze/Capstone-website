@@ -2,6 +2,14 @@ html,
 body {
   margin: 0;
 }
+/* fonts */
+
+  /* Roboto */
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+  /* merrywether */
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap');
 
 .NoScrollBar::-webkit-scrollbar {
   display: none;
@@ -104,3 +112,59 @@ section {
 /* align-items: center;
 justify-content: center;
 text-align: center; */
+
+.has-dropcap:first-letter {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 4rem;
+  line-height: 0.65;
+  margin: 0.1em 0.1em 0.2em 0;
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--bs-nav-pills-link-active-color);
+  background-color:#363636 !important;
+}
+
+
+
+
+/* Desktop styles */
+
+.background-S {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('Capstone-website/images/image1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container-S{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1, p {
+  color: #fff;
+}
+
+/* Mobile styles */
+
+@media (max-width: 768px) {
+  .background-S {
+    background: url('Capstone-website/images/image1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: auto;
+  }
+  
+  .container-S {
+    position: static;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  h1, p {
+    color: rgb(0, 0, 0);
+  }
+}
