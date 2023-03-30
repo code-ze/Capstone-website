@@ -128,7 +128,7 @@ justify-content: center;
 text-align: center; */
 
 .has-dropcap:first-letter {
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-family: "roboto";
   float: left;
   font-size: 4rem;
   line-height: 0.65;
@@ -236,5 +236,9 @@ text-align: center; */
 
   .scroll-T-bg.hide-gradient::after {
     display: none;
+  }
+
+  .scroll-T{
+    mask-image: none;
   }
 }
