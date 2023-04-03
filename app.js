@@ -12,19 +12,11 @@ gsap.utils.toArray(".section").forEach((section) => {
 
 const scrollContainers = document.querySelectorAll(".scroll-T, .scroll-T-bg");
 
-scrollContainers.forEach((scrollContainer) => {
-  const textContent = scrollContainer.querySelector(".text-content");
-
-  if (textContent) {
-    textContent.addEventListener("scroll", () => {
-      if (
-        textContent.scrollTop ===
-        textContent.scrollHeight - textContent.offsetHeight
-      ) {
-        scrollContainer.classList.add("hide-gradient");
-      } else {
-        scrollContainer.classList.remove("hide-gradient");
-      }
-    });
+var scrollT = document.querySelector(".scroll-T");
+scrollT.addEventListener("scroll", function () {
+  if (scrollT.scrollHeight - scrollT.scrollTop === scrollT.clientHeight) {
+    scrollT.classList.add("mask-removed");
+  } else {
+    scrollT.classList.remove("mask-removed");
   }
 });
