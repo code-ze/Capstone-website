@@ -97,12 +97,15 @@ section {
 
 
 .scroll-T {
+  margin-top: 10%;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  height: 60%;
+  height: 50%;
   background: rgb(255, 255, 255);
   overflow: scroll;
 }
+
+
 
 .scroll-T.mask-removed:after {
   /* Remove the mask */
@@ -130,7 +133,7 @@ section {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%;
+  height: 10%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
@@ -187,6 +190,15 @@ text-align: center; */
   object-fit: cover;
 }
 
+.bg-image .gradient-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+}
+
 .bg-titled {
   position: absolute;
   color: #ffffff;
@@ -233,16 +245,20 @@ text-align: center; */
 .text-overlay {
   position: absolute;
   color: #ffffff;
-  top: 0;
+  top: 50%;
+  /* Center it vertically */
   left: 0;
-  height: 100%;
-  width: 100%;
+  transform: translateY(-50%);
+  /* Adjust the position to truly center it vertically */
   z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  /* Align text to the left */
   align-items: center;
-
+  width: 100%;
+  /* Give it full width so the content can be aligned to the left */
 }
+
 
 @media (max-width: 800px) {
   .bg-image {
@@ -267,6 +283,7 @@ text-align: center; */
   }
 
   .scroll-T-bg {
+    margin-top: 10%;
     -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     height: 80%;
@@ -304,4 +321,60 @@ text-align: center; */
   .scroll-T-bg.hide-gradient::after {
     display: none;
   }
+}
+
+
+
+.no-gradient {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+
+
+
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video#video-background {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* Text shadow for better contrast */
+
+}
+
+.content.fade-in {
+  animation: fadeIn 1s ease-in-out;
 }
