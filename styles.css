@@ -1,8 +1,7 @@
 html,
 body {
   margin: 0;
-  width: 100% !important;
-  overflow-x: none;
+  padding: 0;
 }
 
 /* fonts */
@@ -30,7 +29,7 @@ body {
 section {
   min-height: 100vh;
   scroll-snap-align: start;
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -40,7 +39,17 @@ section {
   max-height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
+}
 
+@media only screen and (max-width: 800px) {
+  section {
+    scroll-snap-align: unset;
+    scroll-behavior: smooth;
+  }
+
+  #scroller {
+    scroll-snap-type: unset;
+  }
 }
 
 #scroll-content-wrapper {
@@ -264,6 +273,37 @@ text-align: center; */
 }
 
 
+
+/* for a background with scrolling text */
+
+.scroll-T-bg {
+  margin-top: 10%;
+  margin-left: 5%;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  height: 50%;
+  background: transparent;
+  overflow: scroll;
+}
+
+.scroll-T-bg.mask-removed:after {
+  /* Remove the mask */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.scroll-T-bg::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent transparent;
+}
+
+.scroll-T-bg::-webkit-scrollbar-thumb {
+  width: 1px;
+  background: radial-gradient(circle, rgba(212, 155, 180, 1) 0%, rgba(0, 0, 0, 0) 40%);
+}
+
+
+
 @media (max-width: 800px) {
   .bg-image {
     position: static;
@@ -307,7 +347,6 @@ text-align: center; */
     left: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   }
 
 
@@ -346,7 +385,7 @@ text-align: center; */
 }
 
 video#video-background {
-  min-width: 100%;
+
   min-height: 100%;
   width: auto;
   height: auto;

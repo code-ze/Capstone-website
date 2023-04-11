@@ -54,3 +54,23 @@ videoBackground.addEventListener("timeupdate", () => {
     videoBackground.removeEventListener("timeupdate", arguments.callee);
   }
 });
+
+// when the user finishes scrolling on the text area they can scroll uninstructed on the rest of the page
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollableContent = document.getElementById("scrollText");
+
+  scrollableContent.addEventListener("scroll", function (event) {
+    const isAtBottom =
+      scrollableContent.scrollHeight - scrollableContent.scrollTop ===
+      scrollableContent.clientHeight;
+
+    if (isAtBottom) {
+      // Allow the page to scroll normally
+      scrollableContent.style.overflowY = "hidden";
+    } else {
+      // Keep the scroll behavior within the scrollable element
+      scrollableContent.style.overflowY = "scroll";
+    }
+  });
+});

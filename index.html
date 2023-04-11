@@ -13,7 +13,7 @@
 
 </head>
 
-<body style="max-width: 100% !important;">
+<body>
 
   <nav id="" class=" sidenav hidden-phone">
     <ul class="nav nav-pills" style="display: block;">
@@ -60,7 +60,7 @@
 
 
           <div class="video-container">
-            <video id="video-background" autoplay muted>
+            <video id="video-background" autoplay muted playsinline>
               <source src="images\intro.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -122,7 +122,7 @@
 
 
           <div class="col-lg-6">
-            <div id="scrollText" class=" scroll-T-bg"
+            <div id="scrollText" id="scrollable-content" class=" scroll-T-bg"
               style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); align-items: center; font-family: roboto;">
               <br>
 
@@ -294,6 +294,9 @@
                 into the Diocese of Columbus. The Diocese of Steubenville was originally created in 1944 out of the
                 Columbus area. The change was due to a lack of priests available for services, economic pressures and
                 demographic shifts in the area, according to The Steubenville Register.
+
+                <br>
+                <br>
 
 
               </h3>
@@ -467,10 +470,11 @@
             <div class="text-overlay">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-lg-5 col-sm-12 text-md-left ">
+                  <div class="col-lg-5 col-sm-12">
                     <div class="scroll-T-bg">
                       <br>
-                      <h1 class="display-4" style="font-family: Merriweather ;">Reflection on the Future</h1>
+                      <h1 class="display-4" style="font-family: Merriweather; margin-top: 15%;">Reflection on the
+                        Future</h1>
                       <h4 style="font-family: roboto;">The Pew Research Center recently estimated that by 2070, the
                         number
                         of Americans who identify as Christian would fall near or below 50% of the population, and that
@@ -488,17 +492,13 @@
 
                         <br><br>
                       </h4>
-                      <h3 class="lead display-5" style="font-family: roboto;">
+                      <h3 class="" style=" font-family: roboto; font-size: 3rem;">
                         "God has been taken out of everything, If you really stop and think and look at the whole
                         picture, that's the reason we're in the
                         condition we're at now." -Stickdorn said.
                       </h3>
 
-                      <br><br>
-                      <br><br><br><br>
-                      <br><br>
-                      <br><br>
-                      <br><br>
+
 
 
                     </div>
@@ -517,9 +517,13 @@
 
     <section id="slide-7" style="background-color: rgb(0, 0, 0);">
 
+
       <iframe src="mapboxsStory\index.html" width="90%" height="800" style="border:1px solid black;"
         class="scroll-T::-webkit-scrollbar-thumb">
       </iframe>
+
+
+
     </section>
 
   </div><!--  #scroller -->
