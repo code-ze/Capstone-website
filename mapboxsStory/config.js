@@ -16,7 +16,7 @@ var config = {
       alignment: "center",
       title: '"Nones" on the Rise',
       image: "",
-      hidden: true,
+      hidden: false,
       description:
         ' "Nones" is a popular term used in recent years to describe those who aren\'t religiously affiliated: atheist, agnostic or nothing in particular. 22% of Ohioans fall under that identity, according to a study from the Pew Research Center. That demographic of people might have either been raised in a church or never attended but are currently unaffiliated with a religion.',
       location: {
