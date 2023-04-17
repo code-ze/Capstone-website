@@ -56,3 +56,10 @@ videoBackground.addEventListener("timeupdate", () => {
 });
 
 // when the user finishes scrolling on the text area they can scroll uninstructed on the rest of the page
+
+// parllax video
+
+document.addEventListener("scroll", function () {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  document.documentElement.style.setProperty("--scroll", scrollTop);
+});

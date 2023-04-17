@@ -58,6 +58,7 @@ p {
 
 
 section {
+  position: relative;
   min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
@@ -141,6 +142,7 @@ section {
 
 
 .scroll-T {
+  position: absolute;
   margin-top: 10%;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
@@ -206,6 +208,7 @@ text-align: center; */
 
 /* background with text on top that adjusts with screen size to much styling*/
 .bg-image {
+  position: relative;
   height: 100vh;
   display: block;
   justify-content: center;
@@ -451,4 +454,57 @@ video#video-background {
 
 .content.fade-in {
   animation: fadeIn 1s ease-in-out;
+}
+
+
+
+
+/* section number css */
+.section-number {
+  font-family: roboto;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+/* Hide section numbers on mobile view */
+@media screen and (max-width: 767px) {
+  .section-number {
+    display: none;
+  }
+}
+
+
+
+
+/* Hide the element on screens wider than 600px */
+@media only screen and (min-width: 800px) {
+
+  .allow-desktop {
+    display: initial;
+  }
+
+  .allow-mobile {
+    display: none;
+  }
+}
+
+
+
+/* show for mobile */
+
+@media screen and (max-width: 800px) {
+
+  .allow-desktop {
+    display: none;
+  }
+
+  .allow-mobile {
+    position: relative;
+    width: 100%;
+    display: block;
+    clear: both;
+  }
 }
