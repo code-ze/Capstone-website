@@ -14,11 +14,11 @@ var config = {
       // show the region for ohio
       id: "Abandoned churches in the Appalachia region",
       alignment: "center",
-      title: '"Nones" on the Rise',
+      title: 'Where are these churches?',
       image: "",
       hidden: false,
       description:
-        ' "Nones" is a popular term used in recent years to describe those who aren\'t religiously affiliated: atheist, agnostic or nothing in particular. 22% of Ohioans fall under that identity, according to a study from the Pew Research Center. That demographic of people might have either been raised in a church or never attended but are currently unaffiliated with a religion.',
+        ' The churches that this article alludes to are located in southeastern Ohio. Some are in extremely small towns, some are in slightly more populated areas. They all have one thing in common - attendance is declining. Scroll through this interactive map to see the geographic locations where these churches are.',
       location: {
         center: [-82.18056, 39.46192],
         zoom: 5.83,
