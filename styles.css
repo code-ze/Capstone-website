@@ -190,7 +190,6 @@ justify-content: center;
 text-align: center; */
 
 .has-dropcap:first-letter {
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   float: left;
   font-size: 4rem;
   line-height: 0.65;

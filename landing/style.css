@@ -4,12 +4,14 @@ body {
 }
 
 #main {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.66) 100%, transparent), url(/images/title.jpg);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.66) 100%, transparent), url(title.jpg);
 	background-size: cover, cover;
 	background-position: center, center;
 	height: 100vh;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
+	/* Add this line */
 	justify-content: center;
 	align-items: center;
 }
@@ -56,4 +58,14 @@ h1:after {
 .is-loading h1:before,
 .is-loading h1:after {
 	width: 0;
+}
+
+h4 {
+
+	font-family: Meryweather;
+	text-align: center;
+	font-size: 1.5rem;
+	opacity: 1;
+	transform: scale(1);
+	transition: transform 0.5s ease, opacity 1s ease;
 }
