@@ -63,3 +63,11 @@ document.addEventListener("scroll", function () {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   document.documentElement.style.setProperty("--scroll", scrollTop);
 });
+
+// js for the main page animation and things
+
+$(document).ready(function () {
+  setTimeout(function () {
+    $("#P-main").removeClass("P-is-loading");
+  }, 100);
+});
