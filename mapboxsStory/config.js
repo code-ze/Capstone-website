@@ -14,11 +14,11 @@ var config = {
       // show the region for ohio
       id: "Abandoned churches in the Appalachia region",
       alignment: "center",
-      title: 'Where are these churches?',
+      title: "Where are these churches?",
       image: "",
       hidden: false,
       description:
-        ' The churches that this article alludes to are located in southeastern Ohio. Some are in extremely small towns, some are in slightly more populated areas. They all have one thing in common - attendance is declining. Scroll through this interactive map to see the geographic locations where these churches are.',
+        " The churches that this article alludes to are located in southeastern Ohio. Some are in extremely small towns, some are in slightly more populated areas. They all have one thing in common - attendance is declining. Scroll through this interactive map to see the geographic locations where these churches are.",
       location: {
         center: [-82.18056, 39.46192],
         zoom: 5.83,
@@ -45,7 +45,7 @@ var config = {
       title: "St. Mary of the Hill",
       image: "",
       description:
-        '<b>Location:<b> <a href="https://goo.gl/maps/3TPYZHiZm3C4mFty8" target="_blank">17645 Bank St., Nelsonville,OH</a> <br> <strong> town population:<strong> 4,571',
+        '<b>Location:<b> <a href="https://goo.gl/maps/fNYTRJaxTKy3iykeA" target="_blank">17645 Bank St., Nelsonville,OH</a> <br> <strong> Town population:<strong> 4,571',
 
       location: {
         center: [-82.18056, 39.46193],
@@ -72,7 +72,7 @@ var config = {
       title: "Fork Union Baptist Church",
       image: "",
       description:
-        '<b> Geo Location:<b> <a href="https://goo.gl/maps/yDUrGtovk9ACZ6CFA" target="_blank"> 38.815581, -82.583010</a> <br> <strong> town population:<strong> Abandoned ',
+        '<b> Location:<b> <a href="https://goo.gl/maps/TyjNYM79uu26Q4sM6" target="_blank">45943 Corning St, Murray City, OH 43144 </a> <br> <strong> Town population:<strong> 449 ',
       location: {
         center: [-82.16319, 39.51342],
         zoom: 15.92,
@@ -93,7 +93,7 @@ var config = {
       title: "Mount Zion Church",
       image: "",
       description:
-        '<b> Location:<b> <a href="https://goo.gl/maps/8gYobrFz3GQR7pUH9" target="_blank"> 45955 Corning St, Murray City, OH 43144</a> <br> <strong> town population:<strong> 345  ',
+        '<b> Location:<b> <a href="https://goo.gl/maps/54PNVmnvCNN7Yonc7" target="_blank"> Nelsonville, OH 45764 </a> <br> <strong> Town population:<strong> 345  ',
       location: {
         center: [-82.29776, 39.42196],
         zoom: 15.15,
@@ -119,7 +119,7 @@ var config = {
       title: "United Pentecostal Church",
       image: "",
       description:
-        '<b> Location:<b><a href="https://goo.gl/maps/NTe9VCuhAemPcjap9" target="_blank"> 333 Main St, New Straitsville, OH 43766 </a> <br> <strong> town population:<strong> 654   ',
+        '<b> Location:<b><a href="https://goo.gl/maps/efcwF5eFCqoYy6zJ9" target="_blank"> 333 Main St, New Straitsville, OH 43766 </a> <br> <strong> Town population:<strong> 654   ',
       location: {
         center: [-82.2433, 39.58076],
         zoom: 14.99,
@@ -145,7 +145,7 @@ var config = {
       title: "Stewart Wesleyan Church",
       image: "",
       description:
-        '<b> Location:<b><a href="https://goo.gl/maps/hGjWS5X8yBDMWidq6" target="_blank"> 8721 OH-144, Stewart, OH 45778 </a> <br> <strong> town population:<strong> 326   ',
+        '<b> Location:<b><a href="https://goo.gl/maps/S8kRZtszxe36AaBe9" target="_blank"> 8721 OH-144, Stewart, OH 45778 </a> <br> <strong> Town population:<strong> 326   ',
       location: {
         center: [-81.89262, 39.30802],
         zoom: 20.08,
@@ -171,7 +171,7 @@ var config = {
       title: "Stewart United Methodist Church",
       image: "",
       description:
-        '<b> Location:<b> <a href="https://goo.gl/maps/sYS1zMYr8e3UfnkJ6" target="_blank"> 3 Church St, Athens, OH 45701 </a> <br> <strong> town population:<strong> 326  ',
+        '<b> Location:<b> <a href="https://goo.gl/maps/ChG1P18uj8DQNccq5" target="_blank"> 3 Church St, Athens, OH 45701 </a> <br> <strong> Town population:<strong> 326  ',
       location: {
         center: [-81.894582, 39.30813],
         zoom: 16.73,

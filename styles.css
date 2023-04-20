@@ -1,4 +1,7 @@
-html,
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -26,7 +29,7 @@ p {
 }
 
 /* Adjust the font size and line height for mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   p {
     font-size: 16px;
     line-height: 1.5;
@@ -108,7 +111,7 @@ section {
   right: 0;
   background-color: #ffffff;
   overflow-x: hidden;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,14 +129,14 @@ section {
 .sidenav a {
 
   text-decoration: none;
-  font-size: 30px;
+  font-size: 23px;
   color: #000000;
   display: block;
   margin-bottom: 10px;
   /* add margin between items */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 850px) {
   .sidenav {
     display: none;
   }
@@ -180,7 +183,6 @@ section {
   left: 0;
   width: 100%;
   height: 10%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
 
