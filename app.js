@@ -22,10 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (scrollText.scrollTop >= scrollThreshold) {
         scrollText.classList.add("no-gradient");
-        console.log("Gradient removed:", scrollText);
       } else {
         scrollText.classList.remove("no-gradient");
-        console.log("Gradient applied:", scrollText);
       }
     });
   });
