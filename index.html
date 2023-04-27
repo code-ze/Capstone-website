@@ -94,10 +94,41 @@
       </div>
 
       <div class="p-scroll" style="z-index: 1000;">
-        <a href="#slide-1-a">
+
+        <style>
+          a[data-scroll-to] {
+            cursor: pointer;
+            z-index: 1;
+            padding: 30px;
+            /* Add padding around the <a> tag */
+            display: inline-block;
+            /* Make the <a> tag an inline-block element */
+          }
+        </style>
+        <a data-scroll-to="targetElement">
           <i class="arrow" data-target="#slide-1"></i>
         </a>
       </div>
+
+
+      <script>
+        const scrollLinks = document.querySelectorAll('[data-scroll-to]');
+
+        scrollLinks.forEach((scrollLink) => {
+          scrollLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetElementSelector = '[data-target="' + scrollLink.dataset.scrollTo + '"]';
+            const targetElement = document.querySelector(targetElementSelector);
+
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
+          });
+        });
+      </script>
 
       <script>
         $(document).ready(function () {
@@ -117,11 +148,12 @@
           });
         });
       </script>
-
+      <!--  -->
     </section>
 
     <section id="slide-1" style="background-color: rgb(0, 0, 0);">
-      <div id="slide-1-a" class="container">
+      <div data-target="targetElement" class="container">
+        <!-- data target so it doens't interfere with bootstrap spy -->
         <div class="row gx-5 justify-content-start">
           <div class="col-md-5">
             <br>
@@ -157,7 +189,7 @@
 
 
           <div class="col-lg-6 col-md-5">
-            <div id="scrollText" id="scrollable-content" class=" scroll-T-bg"
+            <div id="scrollText" id="scrollable-content" class=" "
               style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); align-items: center; ">
               <br>
 
@@ -223,7 +255,7 @@
                   </h1>
                   <div class="col-lg-5 col-sm-12">
                     <div style="height: 90vh;">
-                      <div class="scroll-T-bg">
+                      <div class="scroll-T-bg" style="padding-bottom: 10%;">
                         <br>
 
                         <p>Judy Morgan, treasurer of Stewart United Methodist, said the church's budget will be in a
@@ -311,7 +343,7 @@
               <br><br>
               <div class="col-lg-5 col-md-3 col-sm-12">
                 <div id="scrollText" class="scroll-T"
-                  style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); padding-bottom: 15%; margin-right: 5%; margin-top: 3% !important;">
+                  style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); padding-bottom: 10%; margin-right: 5%; margin-top: 3% !important;">
 
 
                   <p>Low attendance numbers and a lack of funding were the
@@ -408,7 +440,7 @@
                     Church</h1>
                   <div class="col-lg-5 col-sm-12">
                     <div style="height: 90vh;">
-                      <div class="scroll-T-bg">
+                      <div class="scroll-T-bg" style="padding-bottom: 10%;">
                         <br>
 
                         <p>The United Pentecostal Church, 333 Main St., in southern Perry
@@ -457,41 +489,43 @@
         </div>
         <div class="section-number">4</div>
     </section>
-    <section id="slide-5" style="background-color: rgb(0, 0, 0); height: 100vh;">
+    <section id="slide-5" style="background-color: rgb(0, 0, 0); max-height: 100vh;">
 
       <div class="container-fluid">
         <div class="row gx-5">
 
           <h1 class="display-4 col-md-12 col-sm-12 order-first"
-            style="font-family: Merriweather; color: white; margin-top: 5%;">
+            style="font-family: Merriweather; color: white; position: relative; margin-top: 3%;">
             Campus Ministry
           </h1>
 
           <div class="col-lg-5 col-sm-12">
-            <div class=" scroll-T-bg"
-              style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); align-items: center;">
+            <div style="height: 90vh;">
+              <div class="scroll-T-bg" style="color: white; padding-bottom: 10%;">
 
 
-              <p>
+                <p>
 
-                Students at Ohio University often find it difficult to find a place to practice their faith with fellow
-                students in Athens.<br><br>
-                Madeline Daley, a sophomore studying media arts production, is a part of OU Catholics. Her choice to
-                continue practicing her faith in college has led her to partake in religious student organizations on
-                and off campus.<br><br>
-                "I just saw a lot of relativism in the world," Daley said. "Just the ability to ask questions … made it
-                so that the truth was able to be communicated, and I could see that there isn't relativism with the
-                Catholic Church."<br><br>
-                Her religion inspired her to connect with like-minded individuals on campus with OU Catholics. Though
-                many college students may shy away from religious organizations on campus, Daley said she remains
-                optimistic about students' future.<br><br>
-                "I see hope for students actually seeing that Catholicism is alive and current, and not an archaic
-                belief," Daley said. "It can actually help with all aspects of someone's life."<br>
+                  Students at Ohio University often find it difficult to find a place to practice their faith with
+                  fellow
+                  students in Athens.<br><br>
+                  Madeline Daley, a sophomore studying media arts production, is a part of OU Catholics. Her choice to
+                  continue practicing her faith in college has led her to partake in religious student organizations on
+                  and off campus.<br><br>
+                  "I just saw a lot of relativism in the world," Daley said. "Just the ability to ask questions … made
+                  it
+                  so that the truth was able to be communicated, and I could see that there isn't relativism with the
+                  Catholic Church."<br><br>
+                  Her religion inspired her to connect with like-minded individuals on campus with OU Catholics. Though
+                  many college students may shy away from religious organizations on campus, Daley said she remains
+                  optimistic about students' future.<br><br>
+                  "I see hope for students actually seeing that Catholicism is alive and current, and not an archaic
+                  belief," Daley said. "It can actually help with all aspects of someone's life."<br>
 
 
 
-              </p>
-
+                </p>
+              </div>
             </div>
           </div>
 
@@ -565,7 +599,7 @@
                     Future</h1>
                   <div class="col-lg-5 col-md-6 col-sm-12">
                     <div style="height: 90vh;">
-                      <div class="scroll-T-bg">
+                      <div class="scroll-T-bg" style="padding-bottom: 10%;">
                         <br>
 
                         <p>The Pew Research Center recently estimated that by 2070, the
@@ -608,67 +642,55 @@
         <div class="section-number">6</div>
     </section>
 
-    <section id="slide-7" style="background-color: rgb(0, 0, 0);">
+    <section id="slide-7" style="background-color: rgb(0, 0, 0);  max-height: 100vh;">
 
-      <div id="scroll-content-wrapper">
-        <div id="scroll-content">
-          <div class="container-fluid">
-            <div class="row gx-3 equal">
-              <br>
-              <h1 class="display-4 col-sm-12" style="font-family: Merriweather ; color: white; margin-top: 5%;">
-                "Nones" on the Rise</h1>
-              <div class="col-lg-6 col-md-8 float-start">
+      <div class="container-fluid">
+        <div class="row gx-5">
 
+          <h1 class="display-4 col-md-12 col-sm-12 order-first"
+            style="font-family: Merriweather; color: white; position: relative; margin-top: 3%; ">
+            "Nones" on the Rise
+          </h1>
 
-                <!-- The slideshow/carousel -->
-
-                <div class="carousel-item active" style="padding-top: 5%;">
-                  <img src="images/char3s3.jpg" alt="" class="d-block" style="width:100%">
-                </div>
+          <div class="col-lg-5 col-sm-12">
+            <div style="height: 90vh;">
+              <div class="scroll-T-bg" style="color: white; padding-bottom: 10%;">
 
 
-              </div>
+                <p>
 
-              <br><br>
-              <div class="col-lg-4 col-md-6 col-sm-12" style="margin-right: 2%;">
-                <div id="scrollText" class="scroll-T"
-                  style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); align-items: center;  position: absolute; padding-bottom: 20%; margin-top: 5%;">
-
-
-                  <p style="width: 80%;">"Nones" is a popular term used in recent years to describe those who aren't
-                    religiously affiliated: atheist, agnostic or nothing in particular. 22% of Ohioans fall under that
-                    identity, according to a study from the Pew Research Center. That demographic of people might have
-                    either been raised in a church or never attended but are currently unaffiliated with a religion.
-                    <br><br>
-
-                    Those who have left the church have various reasons for their choice. Many people aren't affiliated
-                    with a religion because they question religious teaching, according to the same Pew Research Center
-                    survey. Another top response on a recent survey was that individuals do not like the position the
-                    churches take on political and social issues.<br><br>
-
-                    Jessie Donohue was raised in Meigs County and went to the Pentecostal church with her family.
-                    Although she used to attend church services, she no longer does. One-third of people under 30 years
-                    old, like Donohue, are leading the trend compared to the other age groups Pew surveyed.<br><br>
-
-                    Like Donohue, many others in her age group have distanced themselves from their church, driven by
-                    their personal views on LGBTQ+ rights and issues like abortion. Some young individuals who have
-                    relocated to Ohio find it challenging to maintain their religious beliefs.<br>
+                  Students at Ohio University often find it difficult to find a place to practice their faith with
+                  fellow
+                  students in Athens.<br><br>
+                  Madeline Daley, a sophomore studying media arts production, is a part of OU Catholics. Her choice to
+                  continue practicing her faith in college has led her to partake in religious student organizations on
+                  and off campus.<br><br>
+                  "I just saw a lot of relativism in the world," Daley said. "Just the ability to ask questions … made
+                  it
+                  so that the truth was able to be communicated, and I could see that there isn't relativism with the
+                  Catholic Church."<br><br>
+                  Her religion inspired her to connect with like-minded individuals on campus with OU Catholics. Though
+                  many college students may shy away from religious organizations on campus, Daley said she remains
+                  optimistic about students' future.<br><br>
+                  "I see hope for students actually seeing that Catholicism is alive and current, and not an archaic
+                  belief," Daley said. "It can actually help with all aspects of someone's life."<br>
 
 
 
-                  </p>
-
-
-
-                </div>
-                <br>
+                </p>
               </div>
             </div>
           </div>
-        </div>
 
-      </div>
-      <div class="section-number">7</div>
+
+          <div class="col-lg-6  col-sm-12 order-first">
+            <img src="images\char3s3.jpg" alt="" class="d-block" style="width:100%">
+
+          </div>
+
+
+        </div>
+        <div class="section-number">7</div>
     </section>
 
 
@@ -680,7 +702,8 @@
 
       <br>
 
-      <footer class=" py-3 position-absolute bottom-0 w-100" style="background-color: #464646; padding-top: 2%;">
+      <footer class=" py-3 position-absolute bottom-0 w-100"
+        style="background-color: #464646; padding-top: 4%; margin-top: 5%;">
         <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
           <div class="col-auto">
             <span class="d-none d-md-inline me-2 footer-number" style="color: white; font-size: 2rem;">8</span>

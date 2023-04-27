@@ -582,4 +582,20 @@ video#video-background {
   .footer-number {
     display: none;
   }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1403px) {
+  .campus-css {
+    margin-top: 15% !important;
+  }
+
+}
+
+
+a[data-scroll-to] {
+  cursor: pointer;
 }
