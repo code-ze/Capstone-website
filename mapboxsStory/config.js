@@ -18,7 +18,7 @@ var config = {
       image: "",
       hidden: false,
       description:
-        " The churches that this article alludes to are located in southeastern Ohio. Some are in extremely small towns, some are in slightly more populated areas. They all have one thing in common - attendance is declining. Scroll through this interactive map to see the geographic locations where these churches are.",
+        " The churches in this article are located in southeastern Ohio. Some are in extremely small towns, some are in slightly more populated areas. They all have one thing in common - attendance is declining. Scroll through this interactive map to see the geographic locations where these churches are.",
       location: {
         center: [-82.18056, 39.46192],
         zoom: 5.83,
